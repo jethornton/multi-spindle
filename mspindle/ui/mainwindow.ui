@@ -248,7 +248,7 @@ QLabel {font: 12pt &quot;DejaVu Sans&quot;;}</string>
             </property>
             <widget class="QWidget" name="tab">
              <attribute name="title">
-              <string>Tab 1</string>
+              <string>Stuff</string>
              </attribute>
              <widget class="ActionButton" name="actionbutton_10">
               <property name="geometry">
@@ -665,7 +665,7 @@ Z</string>
             </widget>
             <widget class="QWidget" name="tab_2">
              <attribute name="title">
-              <string>Tab 2</string>
+              <string>File</string>
              </attribute>
              <widget class="FileSystemTable" name="filesystemtable">
               <property name="geometry">
@@ -680,588 +680,445 @@ Z</string>
             </widget>
             <widget class="QWidget" name="tab_5">
              <attribute name="title">
-              <string>Page</string>
+              <string>Spindles</string>
              </attribute>
-             <widget class="ActionButton" name="actionbutton_13">
+             <widget class="QGroupBox" name="gridGroupBox">
               <property name="geometry">
                <rect>
-                <x>150</x>
-                <y>50</y>
-                <width>71</width>
-                <height>52</height>
+                <x>0</x>
+                <y>0</y>
+                <width>491</width>
+                <height>181</height>
                </rect>
               </property>
-              <property name="font">
-               <font>
-                <family>DejaVu Sans</family>
-                <pointsize>12</pointsize>
-                <weight>50</weight>
-                <italic>false</italic>
-                <bold>false</bold>
-               </font>
+              <property name="title">
+               <string>Spindle 0</string>
               </property>
-              <property name="text">
-               <string>spindle
+              <layout class="QGridLayout" name="gridLayout_5">
+               <item row="0" column="1">
+                <widget class="ActionButton" name="actionbutton_13">
+                 <property name="font">
+                  <font>
+                   <family>DejaVu Sans</family>
+                   <pointsize>12</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>override
 reset</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.override.reset</string>
-              </property>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.override.reset</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5">
+                <widget class="ActionButton" name="actionbutton_42">
+                 <property name="text">
+                  <string>brake
+off</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.brake.off:0</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="5">
+                <widget class="ActionButton" name="actionbutton_41">
+                 <property name="text">
+                  <string>brake
+on</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.brake.on:0</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="StatusLabel" name="statuslabel_3">
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.0.speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'rpm\\n{}'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="StatusLabel" name="statuslabel_2">
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.0.override&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'override\\n{}'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="ActionButton" name="actionbutton_24">
+                 <property name="text">
+                  <string>spindle
+fwd</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.forward:500,0</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="ActionButton" name="actionbutton_38">
+                 <property name="text">
+                  <string>spindle
+rev</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.reverse:0</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="ActionButton" name="actionbutton_25">
+                 <property name="text">
+                  <string>spindle
+off</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.off</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="4">
+                <widget class="ActionButton" name="actionbutton_27">
+                 <property name="text">
+                  <string>slow
+100</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.slower:0</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0" rowspan="2">
+                <widget class="ActionSlider" name="actionslider_2">
+                 <property name="actionName" stdset="0">
+                  <string>spindle.override</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="4">
+                <widget class="ActionButton" name="actionbutton_26">
+                 <property name="text">
+                  <string>fast
+100</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.faster:0</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="6">
+                <widget class="StatusLED" name="statusled_3">
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.0.brake&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;On&quot;, &quot;expression&quot;: &quot;bool(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </widget>
-             <widget class="ActionButton" name="actionbutton_25">
+             <widget class="QGroupBox" name="gridGroupBox">
               <property name="geometry">
                <rect>
-                <x>310</x>
-                <y>50</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Spindle
-OFF</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.off</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_24">
-              <property name="geometry">
-               <rect>
-                <x>240</x>
-                <y>50</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>fwd 0</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.forward:500,0</string>
-              </property>
-             </widget>
-             <widget class="StatusLabel" name="statuslabel_3">
-              <property name="geometry">
-               <rect>
-                <x>80</x>
-                <y>70</y>
-                <width>49</width>
-                <height>15</height>
-               </rect>
-              </property>
-              <property name="rules" stdset="0">
-               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.0.speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
-              </property>
-             </widget>
-             <widget class="ActionSlider" name="actionslider_2">
-              <property name="geometry">
-               <rect>
-                <x>40</x>
-                <y>30</y>
-                <width>15</width>
-                <height>84</height>
-               </rect>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.override</string>
-              </property>
-             </widget>
-             <widget class="StatusLabel" name="statuslabel_2">
-              <property name="geometry">
-               <rect>
-                <x>50</x>
-                <y>10</y>
-                <width>81</width>
-                <height>16</height>
-               </rect>
-              </property>
-              <property name="rules" stdset="0">
-               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.0.override&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_26">
-              <property name="geometry">
-               <rect>
-                <x>370</x>
-                <y>50</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>fast
-0</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.faster:0</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_27">
-              <property name="geometry">
-               <rect>
-                <x>430</x>
-                <y>50</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>slow
-0</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.slower:0</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_28">
-              <property name="geometry">
-               <rect>
-                <x>140</x>
-                <y>220</y>
-                <width>71</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="font">
-               <font>
-                <family>DejaVu Sans</family>
-                <pointsize>12</pointsize>
-                <weight>50</weight>
-                <italic>false</italic>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>spindle
-reset</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.override.reset:1</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_29">
-              <property name="geometry">
-               <rect>
-                <x>230</x>
-                <y>220</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Spindle
-FWD 1</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.forward:50,1</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_30">
-              <property name="geometry">
-               <rect>
-                <x>300</x>
-                <y>220</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Spindle
-OFF</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.off:1</string>
-              </property>
-             </widget>
-             <widget class="ActionSlider" name="actionslider_4">
-              <property name="geometry">
-               <rect>
-                <x>30</x>
+                <x>0</x>
                 <y>200</y>
-                <width>15</width>
-                <height>84</height>
+                <width>491</width>
+                <height>181</height>
                </rect>
               </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.override:1</string>
+              <property name="title">
+               <string>Spindle 1</string>
               </property>
-             </widget>
-             <widget class="StatusLabel" name="statuslabel_4">
-              <property name="geometry">
-               <rect>
-                <x>40</x>
-                <y>180</y>
-                <width>81</width>
-                <height>16</height>
-               </rect>
-              </property>
-              <property name="rules" stdset="0">
-               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.1.override&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
-              </property>
-             </widget>
-             <widget class="StatusLabel" name="statuslabel_5">
-              <property name="geometry">
-               <rect>
-                <x>70</x>
-                <y>240</y>
-                <width>49</width>
-                <height>15</height>
-               </rect>
-              </property>
-              <property name="rules" stdset="0">
-               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.1.speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_31">
-              <property name="geometry">
-               <rect>
-                <x>420</x>
-                <y>220</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>slow
-1</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.slower:1</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_32">
-              <property name="geometry">
-               <rect>
-                <x>360</x>
-                <y>220</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>fast
-1</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.faster:1</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_33">
-              <property name="geometry">
-               <rect>
-                <x>140</x>
-                <y>370</y>
-                <width>71</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="font">
-               <font>
-                <family>DejaVu Sans</family>
-                <pointsize>12</pointsize>
-                <weight>50</weight>
-                <italic>false</italic>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>spindle
+              <layout class="QGridLayout" name="gridLayout_6">
+               <item row="0" column="5">
+                <widget class="ActionButton" name="actionbutton_31">
+                 <property name="text">
+                  <string>slow
+100</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.slower:1</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0" rowspan="2">
+                <widget class="ActionSlider" name="actionslider_4">
+                 <property name="actionName" stdset="0">
+                  <string>spindle.override:1</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="6">
+                <widget class="ActionButton" name="actionbutton_43">
+                 <property name="text">
+                  <string>brake
+off</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.brake.off:1</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="ActionButton" name="actionbutton_29">
+                 <property name="text">
+                  <string>spindle
+fwd</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.forward:50,1</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="6">
+                <widget class="ActionButton" name="actionbutton_44">
+                 <property name="text">
+                  <string>brake
+on</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.brake.on:1</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5">
+                <widget class="ActionButton" name="actionbutton_32">
+                 <property name="text">
+                  <string>fast
+100</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.faster:1</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="7">
+                <widget class="StatusLED" name="statusled_4">
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.1.brake&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;On&quot;, &quot;expression&quot;: &quot;bool(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="ActionButton" name="actionbutton_39">
+                 <property name="text">
+                  <string>spindle
+rev</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.reverse:50,1</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="4">
+                <widget class="ActionButton" name="actionbutton_30">
+                 <property name="text">
+                  <string>spindle
+off</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.off:1</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="ActionButton" name="actionbutton_28">
+                 <property name="font">
+                  <font>
+                   <family>DejaVu Sans</family>
+                   <pointsize>12</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>override
 reset</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.override.reset:2</string>
-              </property>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.override.reset:1</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="4">
+                <widget class="StatusLabel" name="statuslabel_5">
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.1.speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'rpm\\n{}'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="StatusLabel" name="statuslabel_4">
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.1.override&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'override\\n{}'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </widget>
-             <widget class="ActionButton" name="actionbutton_34">
+             <widget class="QGroupBox" name="gridGroupBox">
               <property name="geometry">
                <rect>
-                <x>230</x>
-                <y>370</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Spindle
-FWD 0</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.forward:500,2</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_35">
-              <property name="geometry">
-               <rect>
-                <x>300</x>
-                <y>370</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Spindle
-OFF</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.off:2</string>
-              </property>
-             </widget>
-             <widget class="ActionSlider" name="actionslider_5">
-              <property name="geometry">
-               <rect>
-                <x>30</x>
-                <y>350</y>
-                <width>15</width>
-                <height>84</height>
-               </rect>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.override:2</string>
-              </property>
-             </widget>
-             <widget class="StatusLabel" name="statuslabel_6">
-              <property name="geometry">
-               <rect>
-                <x>40</x>
-                <y>330</y>
-                <width>81</width>
-                <height>16</height>
-               </rect>
-              </property>
-              <property name="rules" stdset="0">
-               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.2.override&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
-              </property>
-             </widget>
-             <widget class="StatusLabel" name="statuslabel_7">
-              <property name="geometry">
-               <rect>
-                <x>70</x>
+                <x>10</x>
                 <y>390</y>
-                <width>49</width>
-                <height>15</height>
+                <width>481</width>
+                <height>181</height>
                </rect>
               </property>
-              <property name="rules" stdset="0">
-               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.2.speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+              <property name="title">
+               <string>Spindle 2</string>
               </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_36">
-              <property name="geometry">
-               <rect>
-                <x>420</x>
-                <y>370</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>slow
-2</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.slower:2</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_37">
-              <property name="geometry">
-               <rect>
-                <x>360</x>
-                <y>370</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>fast
-2</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.faster:2</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_38">
-              <property name="geometry">
-               <rect>
-                <x>240</x>
-                <y>110</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>rev 0</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.reverse:0</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_39">
-              <property name="geometry">
-               <rect>
-                <x>230</x>
-                <y>280</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>rev 0</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.reverse:50,1</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_40">
-              <property name="geometry">
-               <rect>
-                <x>230</x>
-                <y>430</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>rev 0</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.reverse:2</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_41">
-              <property name="geometry">
-               <rect>
-                <x>370</x>
-                <y>110</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>on</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.brake.on:0</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_42">
-              <property name="geometry">
-               <rect>
-                <x>430</x>
-                <y>110</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>off</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.brake.off:0</string>
-              </property>
-             </widget>
-             <widget class="StatusLED" name="statusled_3">
-              <property name="geometry">
-               <rect>
-                <x>320</x>
-                <y>120</y>
-                <width>30</width>
-                <height>30</height>
-               </rect>
-              </property>
-              <property name="rules" stdset="0">
-               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.0.brake&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;On&quot;, &quot;expression&quot;: &quot;bool(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_43">
-              <property name="geometry">
-               <rect>
-                <x>420</x>
-                <y>280</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>off</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.brake.off:1</string>
-              </property>
-             </widget>
-             <widget class="StatusLED" name="statusled_4">
-              <property name="geometry">
-               <rect>
-                <x>310</x>
-                <y>290</y>
-                <width>30</width>
-                <height>30</height>
-               </rect>
-              </property>
-              <property name="rules" stdset="0">
-               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.1.brake&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;On&quot;, &quot;expression&quot;: &quot;bool(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_44">
-              <property name="geometry">
-               <rect>
-                <x>360</x>
-                <y>280</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>on</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.brake.on:1</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_45">
-              <property name="geometry">
-               <rect>
-                <x>420</x>
-                <y>430</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>off</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.brake.off:2</string>
-              </property>
-             </widget>
-             <widget class="StatusLED" name="statusled_5">
-              <property name="geometry">
-               <rect>
-                <x>310</x>
-                <y>440</y>
-                <width>30</width>
-                <height>30</height>
-               </rect>
-              </property>
-              <property name="rules" stdset="0">
-               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.2.brake&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;On&quot;, &quot;expression&quot;: &quot;bool(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
-              </property>
-             </widget>
-             <widget class="ActionButton" name="actionbutton_46">
-              <property name="geometry">
-               <rect>
-                <x>360</x>
-                <y>430</y>
-                <width>52</width>
-                <height>52</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>on</string>
-              </property>
-              <property name="actionName" stdset="0">
-               <string>spindle.brake.on:2</string>
-              </property>
+              <layout class="QGridLayout" name="gridLayout_7">
+               <item row="0" column="5">
+                <widget class="ActionButton" name="actionbutton_36">
+                 <property name="text">
+                  <string>slow
+100</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.slower:2</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="7">
+                <widget class="StatusLED" name="statusled_5">
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.2.brake&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;On&quot;, &quot;expression&quot;: &quot;bool(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="ActionButton" name="actionbutton_34">
+                 <property name="text">
+                  <string>spindle
+fwd</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.forward:500,2</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="ActionButton" name="actionbutton_40">
+                 <property name="text">
+                  <string>spindle
+rev</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.reverse:2</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0" rowspan="2">
+                <widget class="ActionSlider" name="actionslider_5">
+                 <property name="actionName" stdset="0">
+                  <string>spindle.override:2</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5">
+                <widget class="ActionButton" name="actionbutton_37">
+                 <property name="text">
+                  <string>fast
+100</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.faster:2</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="6">
+                <widget class="ActionButton" name="actionbutton_46">
+                 <property name="text">
+                  <string>brake
+on</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.brake.on:2</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="6">
+                <widget class="ActionButton" name="actionbutton_45">
+                 <property name="text">
+                  <string>brake
+off</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.brake.off:2</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="ActionButton" name="actionbutton_33">
+                 <property name="font">
+                  <font>
+                   <family>DejaVu Sans</family>
+                   <pointsize>12</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>override
+reset</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.override.reset:2</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="StatusLabel" name="statuslabel_6">
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.2.override&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'override\\n{}'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="StatusLabel" name="statuslabel_7">
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.2.speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'rpm\\n{}'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="ActionButton" name="actionbutton_35">
+                 <property name="text">
+                  <string>spindle
+off</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>spindle.off:2</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </widget>
             </widget>
            </widget>
@@ -1334,7 +1191,7 @@ Program</string>
           <item row="0" column="3">
            <widget class="ActionButton" name="actionbutton_6">
             <property name="rules" stdset="0">
-             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint[0].homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint[1].homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint[2].homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Homed' if ch[0] and ch[1] and ch[2] else 'Home\\nAll'&quot;, &quot;name&quot;: &quot;Status&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint[0].homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint[1].homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint[2].homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;\&quot;background-color:rgb(138, 226, 52)\&quot; if ch[0] and ch[1] and ch[2] else ''&quot;, &quot;name&quot;: &quot;Background&quot;}]</string>
+             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Homed' if ch[0] else 'Home\\nAll'&quot;, &quot;name&quot;: &quot;Status&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;\&quot;background-color:rgb(138, 226, 52)\&quot; if ch[0] else ''&quot;, &quot;name&quot;: &quot;Background&quot;}]</string>
             </property>
             <property name="actionName" stdset="0">
              <string>machine.home.all</string>
