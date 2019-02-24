@@ -244,7 +244,7 @@ QLabel {font: 12pt &quot;DejaVu Sans&quot;;}</string>
              <enum>QTabWidget::South</enum>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="tab">
              <attribute name="title">
@@ -660,6 +660,29 @@ Z</string>
               </property>
               <property name="actionName" stdset="0">
                <string>spindle.brake.toggle:0</string>
+              </property>
+             </widget>
+             <widget class="StatusLabel" name="statuslabel_8">
+              <property name="geometry">
+               <rect>
+                <x>30</x>
+                <y>150</y>
+                <width>391</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="rules" stdset="0">
+               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+              </property>
+             </widget>
+             <widget class="MDIButton" name="mdibutton_5">
+              <property name="geometry">
+               <rect>
+                <x>360</x>
+                <y>330</y>
+                <width>52</width>
+                <height>52</height>
+               </rect>
               </property>
              </widget>
             </widget>
