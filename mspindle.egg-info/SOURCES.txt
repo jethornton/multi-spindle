@@ -1,0 +1,10 @@
+README.md
+setup.py
+mspindle/__init__.py
+mspindle/mainwindow.py
+mspindle.egg-info/PKG-INFO
+mspindle.egg-info/SOURCES.txt
+mspindle.egg-info/dependency_links.txt
+mspindle.egg-info/entry_points.txt
+mspindle.egg-info/requires.txt
+mspindle.egg-info/top_level.txt
