@@ -1,6 +1,0 @@
-[gui_scripts]
-mspindle = mspindle:main
-
-[qtpyvcp.vcp]
-mspindle = mspindle
-
