@@ -31,7 +31,7 @@ windows:
   mainwindow:
     # Specify the class to use for the VCP's mainwindow
     #   Format: package.module:class
-    provider: bp_mill.mainwindow:MyMainWindow
+    provider: mspindle.mainwindow:MyMainWindow
 
     # Keyword arguments to pass when initializing the class.
     kwargs:
