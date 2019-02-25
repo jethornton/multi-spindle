@@ -23,7 +23,4 @@ setup(
             'mspindle=mspindle',
         ],
     },
-    install_requires=[
-       'qtpyvcp>=0.1.4',
-    ],
 )
